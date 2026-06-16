@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: todo-app
+    env: node
+    plan: free
+    repo: https://github.com/StudentDinesh/to-dos
+    branch: main
+    buildCommand: npm install
+    startCommand: npm start
+    envVars: []
