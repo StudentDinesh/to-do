@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-top">
+                <div>
+                    <h1>📋 My Todo List</h1>
+                    <p class="subtitle">Stay organized and productive</p>
+                </div>
+                <div class="user-section">
+                    <span id="userDisplay" class="user-display">Loading...</span>
+                    <button id="logoutBtn" class="logout-btn">Logout</button>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <!-- Input Section -->
+            <div class="input-section">
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="todoTitle" 
+                        placeholder="What needs to be done?"
+                        class="todo-input"
+                    >
+                </div>
+
+                <div class="input-group">
+                    <input 
+                        type="text" 
+                        id="todoDescription" 
+                        placeholder="Description (optional)"
+                        class="todo-input"
+                    >
+                </div>
+
+                <div class="input-row">
+                    <select id="todoPriority" class="priority-select">
+                        <option value="low">Low Priority</option>
+                        <option value="medium" selected>Medium Priority</option>
+                        <option value="high">High Priority</option>
+                    </select>
+
+                    <input 
+                        type="date" 
+                        id="todoDueDate" 
+                        class="date-input"
+                    >
+
+                    <button id="addBtn" class="add-btn">+ Add Todo</button>
+                </div>
+            </div>
+
+            <!-- Filter Section -->
+            <div class="filter-section">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="active">Active</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+                <div class="right-actions">
+                    <span id="todoCount" class="todo-count">0 items</span>
+                    <button id="clearBtn" class="clear-btn">Clear All</button>
+                </div>
+            </div>
+
+            <!-- Todo List Section -->
+            <div class="todos-section">
+                <div id="todosList" class="todos-list">
+                    <div class="empty-state">
+                        <p>✨ No todos yet. Add one to get started!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Todo App | Stay productive and organized</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
