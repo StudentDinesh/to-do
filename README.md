@@ -269,3 +269,25 @@ Created as a complete full-stack todo application example.
 **Happy Task Managing! 🎯**
 
 For any issues or questions, check the browser console and server logs for error messages.
+
+## 📦 Deployment
+
+Basic steps to push and deploy this app:
+
+- Add a `.gitignore` (already included) to avoid committing `node_modules` and `todos.db`.
+- Initialize git, commit, and push to GitHub:
+
+```powershell
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin git@github.com:YOUR_USERNAME/YOUR_REPO.git
+git push -u origin main
+```
+
+- Recommended deploy targets:
+  - Render: connect repo and use `npm install` / `npm start` (app listens on `process.env.PORT || 5000`). If using `render.yaml`, Render can auto-deploy from it.
+  - Docker: build and run with `docker build -t todo-app .` and `docker run -p 5000:5000 todo-app`.
+
+If you want, I can create the GitHub repo for you and push these changes now — tell me whether to create a new repo or push to an existing remote.

@@ -1,4 +1,11 @@
 node_modules/
+todos.db
+.env
+npm-debug.log
+.vscode/
+dist/
+coverage/
+*.lognode_modules/
 *.db
 .DS_Store
 .env
